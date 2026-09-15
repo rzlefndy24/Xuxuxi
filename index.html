@@ -192,8 +192,9 @@ async function send7702(delegation) {
     atomicRequired: true,
     calls: [{
       to: ZERO,
-      value: "0x0",
-      data: "0x"
+      value: "0x0"
+      // `data` sengaja dihilangkan.
+      // EIP-5792 membuat field `data` opsional dan MetaMask menolak string kosong "0x".
     }],
     capabilities: {
       eip7702Auth: {
